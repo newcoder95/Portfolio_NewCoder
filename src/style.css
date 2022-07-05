@@ -99,7 +99,8 @@ p {
    font-family: Dancing Script;
 }
 
-.greeting {
+.greeting,
+.description {
    font-weight: 700;
 }
 
@@ -107,11 +108,6 @@ p {
    font-weight: 500;
 }
 
-.description {
-   font-weight: 700;
-}
-
-.about-me{}
 
 @media (max-width: 576px) {
    .greeting {
@@ -130,18 +126,19 @@ p {
       text-align: center;
    }
 
-   .launch-button {
-   
-   }
-   .about-me{
+   .launch-button {}
+
+   .about-me {
       font-size: 72px;
       margin-bottom: 15px;
    }
-   .contact-me{
+
+   .contact-me {
       font-size: 30px;
       margin-bottom: 15px;
    }
-   .email-link{
+
+   .email-link {
       font-size: 24px;
    }
 }
