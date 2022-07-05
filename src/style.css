@@ -86,7 +86,7 @@ p {
    color: var(--primary-color);
    font-size: 28px;
    text-decoration: none;
-   margin-bottom: 10px;
+
 }
 
 .email-link:hover {
@@ -129,7 +129,7 @@ p {
    .launch-button {}
 
    .about-me {
-      font-size: 72px;
+      font-size: 64px;
       margin-bottom: 15px;
    }
 
@@ -143,14 +143,8 @@ p {
    }
 }
 
-.navbar-brand {
-   position: relative;
-   padding-left: 100px;
-}
 
 .navbar-logo {
-   max-width: 100px;
-   position: absolute;
-   top: -5px;
-   left: 0;
+   max-width: 150px;
+
 }
