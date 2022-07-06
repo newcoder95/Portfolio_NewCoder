@@ -57,7 +57,9 @@ p {
    box-shadow: var(--box-shadow);
    color: white;
 }
-
+.primary-link:hover{
+   color: white;
+}
 .secondary-link {
    text-decoration: none;
    text-transform: capitalize;
@@ -130,7 +132,11 @@ p {
       text-align: center;
    }
 
-   .launch-button {}
+   .launch-button {
+      display: block;
+      text-align: center;
+      margin: 0 20px;
+   }
 
    .about-me {
       font-size: 64px;
