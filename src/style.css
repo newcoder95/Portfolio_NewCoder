@@ -37,7 +37,7 @@ p {
 .hero {
    text-align: center;
    padding: 120px 0;
-   background-image: url('../bg/bg5.jpg');
+   background-image: url('bg/bg5.jpg');
    background-repeat: no-repeat;
    background-position: 100% 90%;
    background-size: cover;
