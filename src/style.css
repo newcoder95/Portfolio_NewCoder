@@ -5,27 +5,31 @@
 }
 
 body {
-   margin-top: 100px;
    font-family: Karla;
-   color: rgb(33, 30, 36);
+   color: var(--branding-color);
 }
 
 h1,
 h2,
 h3 {
-
    margin: 0;
 }
 
 h1 {
-   font-size: 96px;
+   font-size: calc(44px + 52 * (100vw/1200));
    color: #263236;
 }
 
 h2 {
    color: #3E545A;
-   font-size: 32px;
    opacity: 0.9;
+}
+
+h3 {
+   color: #3E545A;
+   font-size: 40px;
+   opacity: 0.9;
+   font-weight: 700;
 }
 
 p {
@@ -34,23 +38,51 @@ p {
    line-height: 1.5;
 }
 
+.projects {
+   background-color: #fafbfb;
+}
+
+/* --------------------------NAVBAR--------------------------- */
+.navbar {
+   background-color: rgba(255, 255, 255, 0.9);
+}
+
+.nav-link {
+   color: var(--branding-color);
+}
+
+.active {
+   color: black;
+   font-weight: bold;
+}
+
+/* -----------------Main Page---------------------------------- */
 .hero {
    text-align: center;
-   padding: 120px 0;
+   padding: 180px 0;
    background-image: url('/bg/bg5.jpg');
    background-repeat: no-repeat;
    background-position: 100% 90%;
    background-size: cover;
    margin-bottom: 50px;
+   overflow: hidden;
 }
 
-.navigation-links {
+.title {
+   font-family: Dancing Script;
+   font-weight: 700;
+}
+
+.subtitle {
+   font-size: calc(24px + 8 * (100vw/1200));
+}
+
+.main-buttons {
    display: flex;
-   margin-top: 40px;
    justify-content: center;
 }
 
-.navigation-links a {
+.main-buttons a {
    margin: 20px 40px;
    font-weight: 700;
 }
@@ -63,34 +95,148 @@ p {
    font-size: 18px;
    line-height: 28px;
    box-shadow: var(--box-shadow);
-   transition: all ease-in 0.3s;
+   transition: all ease-in-out 0.3s;
 }
 
-._contact {
+.btn_contact {
    background-color: var(--branding-color);
    color: rgb(251, 251, 251);
    border: #263236;
 }
 
-._contact:hover {
+.btn_contact:hover {
    background-color: var(--secondary-color);
    color: rgb(251, 251, 251);
 }
 
-._about {
+.btn_projects {
    color: var(--branding-color);
    background-color: rgba(237, 246, 235, 0.5);
    border: 2px solid #273741;
 }
-._about:hover{
-background-color: rgba(250, 255, 250, 0.5);
+
+.btn_projects:hover {
+   background-color: rgba(250, 255, 250, 0.9);
 }
 
-.homepage-link {
-   color: var(--primary-color);
-   text-align: center;
-   display: block;
+.container-about {
+   max-width: 900px;
 }
+
+.my-photo {
+   width: 100%;
+   max-width: 400px;
+}
+
+.get-in-touch {
+   text-decoration: none;
+   text-transform: capitalize;
+   border-radius: 4px;
+   padding: 15px 25px;
+   font-size: 18px;
+   line-height: 28px;
+   box-shadow: var(--box-shadow);
+   transition: all ease-in-out 0.3s;
+   background-color: var(--branding-color);
+   color: rgb(251, 251, 251);
+   border: 1px solid #263236;
+}
+
+.get-in-touch:hover {
+   background-color: var(--secondary-color);
+   color: rgb(251, 251, 251);
+}
+
+
+@media(max-width:576px) {
+   .main-buttons a {
+      margin: 20px;
+   }
+
+   .my-photo {
+      display: block;
+      max-width: 300px;
+      margin: 0 auto 20px;
+   }
+
+   h3 {
+      text-align: center;
+   }
+
+   .my-story {
+      text-align: center;
+   }
+}
+
+
+/* ----------------------------Projects--------------------------------- */
+.projects-header {
+   margin-top: 55px;
+   padding-top: 30px;
+}
+
+.secondary-title {
+   font-size: calc(16px + 6 * (100vw/1500));
+   color: #3E545A;
+   opacity: 0.9;
+}
+
+._1,
+._3,
+._5 {
+   padding: 0 0 0 30px;
+}
+
+._2,
+._4 {
+   padding: 0 30px 0 0;
+}
+
+.project-name {
+   font-size: calc(24px + 30 * (100vw/1500));
+}
+
+.project-description {
+   line-height: 1.5;
+}
+
+.btn-branding-outline {
+   text-decoration: none;
+   text-transform: capitalize;
+   border-radius: 4px;
+   padding: 15px 25px;
+   font-size: 18px;
+   line-height: 28px;
+   background-color: var(--branding-color);
+   color: rgb(251, 251, 251);
+   border: 1px solid #263236;
+}
+
+.btn-branding-outline:hover {
+   background-color: var(--secondary-color);
+   color: rgb(251, 251, 251);
+}
+
+
+@media(max-width:992px) {
+   .projects-header {
+      padding: 30px 20px 0;
+   }
+
+   .secondary-title {
+      padding: 0 15px;
+   }
+
+   ._1,
+   ._2,
+   ._3,
+   ._4,
+   ._5 {
+      padding: 0;
+   }
+}
+
+/* -------------------------------About-------------------------------- */
 
 .about-paragraphs {
    margin: 30px 0;
@@ -106,25 +252,11 @@ background-color: rgba(250, 255, 250, 0.5);
    color: var(--primary-color);
    font-size: 28px;
    text-decoration: none;
-
 }
 
 .email-link:hover {
    text-decoration: underline;
 }
-
-.name {
-   font-family: Dancing Script;
-}
-
-.name {
-   font-weight: 700;
-}
-
-.description {
-   font-weight: 500;
-}
-
 
 .first-row {
    margin-bottom: 25px;
@@ -132,9 +264,7 @@ background-color: rgba(250, 255, 250, 0.5);
 
 .navbar-logo {
    max-width: 150px;
-
 }
-
 
 @media (max-width: 576px) {
 
@@ -144,7 +274,7 @@ background-color: rgba(250, 255, 250, 0.5);
 
    .project-name {
       text-align: center;
-      font-size: 36px;
+
    }
 
    .project-description {
@@ -192,17 +322,18 @@ background-color: rgba(250, 255, 250, 0.5);
       flex-direction: column-reverse;
    }
 
-   .project-name {
-      font-size: 36px;
-   }
+   .project-name {}
 
 }
 
 
 @media (max-width: 1200px) {
-   .project-name {
-      font-size: 42px;
-   }
+   .project-name {}
 
+}
 
+.homepage-link {
+   color: var(--primary-color);
+   text-align: center;
+   display: block;
 }
