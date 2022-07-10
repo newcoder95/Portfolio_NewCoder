@@ -4,7 +4,11 @@
    --box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
 }
 
+html,
 body {
+   width: 100%;
+   height: 100%;
+   scroll-behavior: smooth;
    font-family: Karla;
    color: var(--branding-color);
 }
@@ -30,6 +34,13 @@ h3 {
    font-size: 40px;
    opacity: 0.9;
    font-weight: 700;
+}
+
+h4 {
+   color: #3E545A;
+   font-size: calc(22px + 4 * (100vw/1500));
+   font-weight: 600;
+   line-height: 1.5;
 }
 
 p {
@@ -59,14 +70,25 @@ p {
 /* -----------------Main Page---------------------------------- */
 .hero {
    text-align: center;
-   padding: 180px 0;
+   padding: 140px 0;
    background-image: url('/bg/bg5.jpg');
    background-repeat: no-repeat;
    background-position: 100% 90%;
    background-size: cover;
-   margin-bottom: 50px;
    overflow: hidden;
+   min-height: 100vh;
 }
+
+/* @media (max-width: 576px) {
+   .hero {
+      padding: 95px 0;
+   }
+}
+@media (max-width: 768px) {
+   .hero {
+      padding: 115px 0;
+   }
+} */
 
 .title {
    font-family: Dancing Script;
@@ -119,54 +141,11 @@ p {
    background-color: rgba(250, 255, 250, 0.9);
 }
 
-.container-about {
-   max-width: 900px;
-}
-
-.my-photo {
-   width: 100%;
-   max-width: 400px;
-}
-
-.get-in-touch {
-   text-decoration: none;
-   text-transform: capitalize;
-   border-radius: 4px;
-   padding: 15px 25px;
-   font-size: 18px;
-   line-height: 28px;
-   box-shadow: var(--box-shadow);
-   transition: all ease-in-out 0.3s;
-   background-color: var(--branding-color);
-   color: rgb(251, 251, 251);
-   border: 1px solid #263236;
-}
-
-.get-in-touch:hover {
-   background-color: var(--secondary-color);
-   color: rgb(251, 251, 251);
+.look {
+   font-size: calc(30px + 10 * (100vw/1500));
 }
 
 
-@media(max-width:576px) {
-   .main-buttons a {
-      margin: 20px;
-   }
-
-   .my-photo {
-      display: block;
-      max-width: 300px;
-      margin: 0 auto 20px;
-   }
-
-   h3 {
-      text-align: center;
-   }
-
-   .my-story {
-      text-align: center;
-   }
-}
 
 
 /* ----------------------------Projects--------------------------------- */
@@ -237,6 +216,75 @@ p {
 }
 
 /* -------------------------------About-------------------------------- */
+.container-about {
+   max-width: 900px;
+   padding-top: 70px;
+}
+
+.my-photo {
+   width: 100%;
+   max-width: 400px;
+}
+
+.get-in-touch {
+   text-decoration: none;
+   text-transform: capitalize;
+   border-radius: 4px;
+   padding: 15px 25px;
+   font-size: 18px;
+   line-height: 28px;
+   box-shadow: var(--box-shadow);
+   transition: all ease-in-out 0.3s;
+   background-color: var(--branding-color);
+   color: rgb(251, 251, 251);
+   border: 1px solid #263236;
+}
+
+.get-in-touch:hover {
+   background-color: var(--secondary-color);
+   color: rgb(251, 251, 251);
+}
+
+
+@media(max-width:576px) {
+   .main-buttons a {
+      margin: 20px;
+   }
+
+   .my-photo {
+      display: block;
+      max-width: 300px;
+      margin: 0 auto 20px;
+   }
+
+   h3 {
+      text-align: center;
+   }
+
+   .my-story {
+      text-align: center;
+   }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 .about-paragraphs {
    margin: 30px 0;
