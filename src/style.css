@@ -356,9 +356,7 @@ p {
 
 .contact-box {
    margin: 0 auto;
-   max-width: 1500px;
-   padding: 30px;
-   border-radius: 10px;
+   padding: 30px 0;
    background-color: #e9f3f6;
    flex-wrap: wrap;
 
