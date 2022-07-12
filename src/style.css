@@ -52,7 +52,7 @@ h4 {
 }
 
 h6 {
-  font-size: calc(30px + 18 * (100vw/1500));
+   font-size: calc(30px + 18 * (100vw/1500));
    font-weight: 700;
 }
 
@@ -62,9 +62,7 @@ p {
    line-height: 1.5;
 }
 
-.projects {
-   background-color: #fafbfb;
-}
+
 
 /* --------------------------NAVBAR--------------------------- */
 .navbar {
@@ -168,6 +166,10 @@ p {
 
 
 /* ----------------------------Projects--------------------------------- */
+.projects {
+   background-color: #fafbfb;
+}
+
 .projects-header {
    margin-top: 55px;
    padding-top: 30px;
@@ -215,6 +217,25 @@ p {
    color: rgb(251, 251, 251);
 }
 
+.row-1,
+.row-2,
+.row-3,
+.row-4,
+.row-5 {
+   padding-top: 60px;
+}
+
+@media(max-width:576px) {
+
+   .row-1,
+   .row-2,
+   .row-3,
+   .row-4,
+   .row-5 {
+      padding-top: 20px;
+   }
+
+}
 
 @media(max-width:992px) {
    .projects-header {
@@ -233,6 +254,7 @@ p {
       padding: 0;
    }
 }
+
 
 /* -------------------------------About-------------------------------- */
 .container-about {
